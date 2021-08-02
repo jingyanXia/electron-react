@@ -11,5 +11,7 @@ const {app ,BrowserWindow} = require('electron')
         })
         const urlLocation = isDev ? 'http://localhost:3000':'kaifa'
 
+        mainWindow.webContents.openDevTools();
+
         mainWindow.loadURL(urlLocation)
     })

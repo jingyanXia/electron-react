@@ -99,10 +99,33 @@
    安装： ``` yarn add cross-env --dev ```
    
    使用：改造package.json文件，只要修改运行命令即可
+   ```
+     "scripts": {
+          "start": "react-scripts start",
+          "build": "react-scripts build",
+          "test": "react-scripts test",
+          "eject": "react-scripts eject",
+          "dev": "concurrently  \"wait-on http://localhost:3000 && electron .\" \"cross-env BROWSER=none yarn start\"",
+          "electron": "electron"
+    }, 
+   ```
    
+  5. 样式库 bootstrap
+
+     安装：  ``` yarn add bootstrap --save ```
+     
+     使用：在App.js里引入即可
+     
+     ``` 
+     import 'bootstrap/dist/css/bootstrap.min.css'
+     ```
+     
+     
+     
+     
+
    
+
    
-   
-   
-   
+
    
